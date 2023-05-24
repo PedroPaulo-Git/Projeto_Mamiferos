@@ -6,7 +6,7 @@ export class FindMamiferoController {
     async handle (request: Request,response: Response){
         const {nome} = request.params;
 
-        const mamiferos = await database.mamiferos.findFirst({
+        const mamiferos = await database.mamiferos.findMany({
             where:{
                 nome:String(nome)
             }
