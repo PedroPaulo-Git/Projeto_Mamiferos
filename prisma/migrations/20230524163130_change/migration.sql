@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*
   Warnings:
 
@@ -11,7 +11,6 @@ ALTER TABLE "Mamiferos" DROP CONSTRAINT "Mamiferos_pkey",
 DROP COLUMN "id",
 ADD COLUMN     "id" SERIAL NOT NULL,
 ADD CONSTRAINT "Mamiferos_pkey" PRIMARY KEY ("id");
-=======
 /*
   Warnings:
 
@@ -24,4 +23,4 @@ ALTER TABLE "Mamiferos" DROP CONSTRAINT "Mamiferos_pkey",
 DROP COLUMN "id",
 ADD COLUMN     "id" SERIAL NOT NULL,
 ADD CONSTRAINT "Mamiferos_pkey" PRIMARY KEY ("id");
->>>>>>> b05f33c659820a53a6f5fe198abe84c2c9067ff7
+

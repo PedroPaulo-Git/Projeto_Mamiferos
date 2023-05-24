@@ -1,11 +1,12 @@
 import { Request,Response } from "express";
 import { database } from "../database";
+import { describe } from "node:test";
 
 
 export class UpdateMamiferoController{
     async handle (request: Request, response: Response){
         const {id} = request.params
-        const {nome,especie,idade,voa,carnivoro} = request.body;
+        const {nome,especie,idade,voa,carnivoro,descricao} = request.body;
 
         const mamiferos = await database.mamiferos.update({
             where:{
@@ -16,7 +17,8 @@ export class UpdateMamiferoController{
                 especie:especie,
                 idade: idade,
                 voa: voa,
-                carnivoro: carnivoro
+                carnivoro: carnivoro,
+                descricao:descricao
               }
             })
         

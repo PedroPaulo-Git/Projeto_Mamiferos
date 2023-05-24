@@ -4,7 +4,7 @@ import { database } from "../database";
 
 export class CreateMamiferoController {
     async handle (request: Request,response: Response){
-        const {nome,especie,idade} = request.body;
+        const {nome,especie,idade,descrição} = request.body;
 
         const mamiferos = await database.mamiferos.create({
             data: {
@@ -12,7 +12,8 @@ export class CreateMamiferoController {
                 especie: 'Mamifero',
                 idade: 2,
                 voa: false,
-                carnivoro: true
+                carnivoro: true,
+                descricao:"Mamífero de porte médio, conhecido por sua pelagem cinza, máscara facial característica e habilidades de escalada."
               }
               
 

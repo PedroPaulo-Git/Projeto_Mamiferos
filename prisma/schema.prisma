@@ -16,4 +16,6 @@ model Mamiferos{
   idade Int
   voa Boolean
   carnivoro Boolean
+  descricao String
+
 }
