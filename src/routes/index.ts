@@ -14,6 +14,7 @@ const updatemamifero = new UpdateMamiferoController();
 
 router.post('/mamifero',createmamifero.handle);
 router.get('/mamifero/:nome', findmamifero.handle);
+router.get('/mamifero', findmamifero.handle);
 router.delete ('/mamifero/:id', deletemamifero.handle);
 router.put('/mamifero/:id', updatemamifero.handle );
 

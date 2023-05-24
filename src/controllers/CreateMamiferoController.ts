@@ -9,8 +9,8 @@ export class CreateMamiferoController {
         const mamiferos = await database.mamiferos.create({
             data: {
                 nome: "Guaxinim", 
-                especie: 'Mamifero',
-                idade: 2,
+                especie: 'Procyon cancrivorus',
+                idade: 1,
                 voa: false,
                 carnivoro: true,
                 descricao:"Mamífero de porte médio, conhecido por sua pelagem cinza, máscara facial característica e habilidades de escalada."

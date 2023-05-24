@@ -4,12 +4,17 @@ import { database } from "../database";
 
 export class FindMamiferoController {
     async handle (request: Request,response: Response){
-        const {nome} = request.params;
+
+        const { nome: nomeparametro } = request.params;
+        const { nome: nomecorpo } = request.body;
 
         const mamiferos = await database.mamiferos.findMany({
-            where:{
-                nome:String(nome)
-            }
+            where: {
+                OR: [
+                  { nome: { contains: nomeparametro } },
+                  { nome: { contains: nomecorpo } }
+                ]
+              },
         })
 
         return response.json(mamiferos);
